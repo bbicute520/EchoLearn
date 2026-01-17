@@ -28,16 +28,21 @@ const BulkAdd = ({ onAdded }) => {
   };
 
   return (
-    <div style={{ padding: '15px', border: '1px solid #ccc', background: '#f4f4f4' }}>
-      <h4>Nhập nhanh (Định dạng: word:meaning)</h4>
+    <div className="p-4 border border-gray-200 bg-gray-50 rounded-lg">
+      <h4 className="font-medium mb-3">Nhập nhanh (Định dạng: word:meaning)</h4>
       <textarea 
         rows="6" 
-        style={{ width: '100%', marginBottom: '10px' }}
+        className="w-full mb-3 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         placeholder="apple:quả táo&#10;banana:quả chuối"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={handleBulkAdd}>Lưu danh sách</button>
+      <button 
+        onClick={handleBulkAdd}
+        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+      >
+        Lưu danh sách
+      </button>
     </div>
   );
 };
